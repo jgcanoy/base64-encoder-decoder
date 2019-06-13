@@ -1,0 +1,10 @@
+<form class="converter-form">
+  <mat-form-field appearance="outline" floatLabel="always">
+    <mat-label>Plain Text</mat-label>
+    <textarea matInput placeholder="Ex: Hello World" rows="10" [value]="plainText" (keyup)="updateEncodedText($event.target.value)"></textarea>
+  </mat-form-field>
+  <mat-form-field appearance="outline" floatLabel="always">
+    <mat-label>Encoded Text</mat-label>
+    <textarea matInput placeholder="Ex: SGVsbG8gV29ybGQ=" rows="10" [value]="encodedText" (keyup)="updatePlainText($event.target.value)"></textarea>
+  </mat-form-field>
+</form>
